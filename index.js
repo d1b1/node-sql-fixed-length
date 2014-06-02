@@ -10,8 +10,7 @@ var argv = require('optimist')
     .demand('f').alias('f', 'from').describe('f', 'From Date (YYYY-MM-DD)')
     .demand('t').alias('t', 'to').describe('t', 'To Date (YYYY-MM-DD)')
     .demand('o').alias('o', 'out').describe('o', 'Output file name')
-    .argv
-;
+    .argv;
 
 var padl = help.padl;
 var padr = help.padr;
