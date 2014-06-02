@@ -1,17 +1,14 @@
 {
   "name": "node-sql-fixed-length",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/d1b1/node-sql-fixed-length.git"
   },
   "bin": "./index.js",
-  "author": "",
+  "author": "Stephan Smith <stephan.smith.bc93@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/d1b1/node-sql-fixed-length/issues"
