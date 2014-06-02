@@ -8,6 +8,19 @@ later, and to remove the need to tweak the SQL string.
 
 Fun.
 
+### Security
+To keep from doing stupid end of the day mistakes, the db conn info must
+is found in a db.jon file. Create this file in the root and all will work.
+
+    ./db.json
+    {
+      "host"     : "localhost",
+      "user"     : "root",
+      "password" : "hacked-by-bobo",
+      "database" : "myDB",
+      "prefix"   : ""
+    }
+
 ### Usage
 
     node index.js --help
