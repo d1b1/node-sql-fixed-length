@@ -1,0 +1,26 @@
+{
+  "name": "node-sql-fixed-length",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d1b1/node-sql-fixed-length.git"
+  },
+  "bin": "./index.js",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d1b1/node-sql-fixed-length/issues"
+  },
+  "homepage": "https://github.com/d1b1/node-sql-fixed-length",
+  "dependencies": {
+    "mysql": "^2.3.2",
+    "underscore": "^1.6.0",
+    "moment": "^2.6.0",
+    "optimist": "^0.6.1"
+  }
+}
