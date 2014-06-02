@@ -23,5 +23,13 @@ is found in a db.jon file. Create this file in the root and all will work.
 
 ### Usage
 
-    node index.js --help
+    MYSQL Query to a text file.
+    Usage: node ./index.js
+
+    Options:
+      -f, --from  From Date (YYYY-MM-DD)  [required]
+      -t, --to    To Date (YYYY-MM-DD)    [required]
+      -o, --out   Output file name        [required]
+
+    Sample:
     node index.js -f 2014-01-01 -t 2014-02-01 -o myfile.txt
