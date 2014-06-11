@@ -74,7 +74,9 @@ connection.query(sql, function(err, rows, fields) {
       + padr( (n[0] ? n[0].trim().substr(0, 26) : ''), del, 26)        // First Name, 26
       + padr( (i.addr_zipcode || '').replace('-','').trim().substr(0, 9), '0', 10) + ' '  // ZipCode, 10
       + padr('', 0, 14)                                  // Reward Amt, 25 Code: 80/81
-      + padl(amount, '0', 18)                            // Reward Unit, 18
+      + '00000000000.'
+      + padl(amount, '0', 13)                            // Reward Unit, 18
+      + padr('.', '0', 7)
       + '+'                                              // Reward Sign, 1
       + currentDate                                      // Trans Date, 10
       + 'DLF'                                            // Partner Code, 3
