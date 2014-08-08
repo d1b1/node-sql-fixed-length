@@ -33,3 +33,7 @@ is found in a db.jon file. Create this file in the root and all will work.
 
     Sample:
     node index.js -f 2014-01-01 -t 2014-02-01 -o myfile.txt
+
+### Example
+
+    node index.js -f 2014-07-01 -t 2014-08-01 -o myfile-new.txt

@@ -82,12 +82,12 @@ connection.query(sql, function(err, rows, fields) {
       + 'DLF'                                            // Partner Code, 3
       + '00000000541';                                   // Activity Code, 11
 
-    stream.write(s + '\r');
+    stream.write(s + '\r\n');
   });
 
   // Example Footer:
   // 09 USBA DLYFFLEX 0000000012
-  var footer = '09USBA' + 'DLYFFLEX' + padl(rows.length.toString(), '0', 10) + '\r';
+  var footer = '09USBA' + 'DLYFFLEX' + padl(rows.length.toString(), '0', 10) + '\r\n';
 
   stream.write(footer);
 });
