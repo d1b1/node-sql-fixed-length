@@ -72,7 +72,7 @@ connection.query(sql, function(err, rows, fields) {
       + 'L'                                              // Loyalty Flat, 1
       + padr( (n[1] ? n[1].trim().substr(0, 26) : ''), del, 26)        // Last Name, 26
       + padr( (n[0] ? n[0].trim().substr(0, 26) : ''), del, 26)        // First Name, 26
-      + padr( (i.addr_zipcode || '').replace('-','').trim().substr(0, 9), '0', 10) + ' '  // ZipCode, 10
+      + padr( (i.addr_zipcode || '').replace('-','').trim().substr(0, 9), '0', 9) + ' '  // ZipCode, 10
       + padr('', 0, 14)                                  // Reward Amt, 25 Code: 80/81
       + '00000000000.'
       + padl(amount, '0', 13)                            // Reward Unit, 18
@@ -87,7 +87,13 @@ connection.query(sql, function(err, rows, fields) {
 
   // Example Footer:
   // 09 USBA DLYFFLEX 0000000012
-  var footer = '09USBA' + 'DLYFFLEX' + padl(rows.length.toString(), '0', 10) + '\r\n';
+
+  // Note: Adding 2 to the row to account for the first and last rows
+  // added to the file.
+  var rowCount = rows.length;
+  rowCount = rowCount + 2;
+  
+  var footer = '09USBA' + 'DLYFFLEX' + padl(rowCount.toString(), '0', 10) + '\r\n';
 
   stream.write(footer);
 });
