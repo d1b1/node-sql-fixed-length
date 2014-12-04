@@ -55,7 +55,7 @@ connection.query(sql, function(err, rows, fields) {
   // 01 USB ADLYFFLEX 02/03/2014 001
   var header = '01' + 'USBA' + 'DLYFFLEX' + currentDate + '001';
 
-  stream.write(header + '\r');
+  stream.write(header + '\r\n');
 
   _.each(rows, function(i) {
     var n = i.name.split(' ');
@@ -92,7 +92,7 @@ connection.query(sql, function(err, rows, fields) {
   // added to the file.
   var rowCount = rows.length;
   rowCount = rowCount + 2;
-  
+
   var footer = '09USBA' + 'DLYFFLEX' + padl(rowCount.toString(), '0', 10) + '\r\n';
 
   stream.write(footer);
